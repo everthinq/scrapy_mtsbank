@@ -1,0 +1,10 @@
+// Go to -- https://www.mtsbank.ru/o-banke/ofisi-i-bankomati/
+// Copy the code below
+
+$('#popup-area_city-list .city-list .city-item').each(function() {
+    let text = $(this).text();
+    let guid = $(this).attr('guid');
+
+    let json_test = JSON.parse('{"city":"' + text + '", "guid":"' + guid + '"}');
+    console.log(JSON.stringify(json_test))
+})
